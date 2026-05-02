@@ -42,7 +42,7 @@ export default function ImageGenerator() {
         <div className="mb-5">
           <p className="text-sm uppercase tracking-[0.22em] text-sky-300">Module 1</p>
           <h2 className="mt-2 text-2xl font-bold text-white">AI Image Generator</h2>
-          <p className="mt-2 text-sm leading-6 text-slate-400">
+          <p className="mt-2 text-sm leading-6 text-slate-200">
             User scene/script/prompt dega aur app us ke mutabik exactly one final image generate karegi.
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function ImageGenerator() {
       <section className="glass-card rounded-3xl p-6">
         <h3 className="text-xl font-bold text-white">Image Output</h3>
         {!result ? (
-          <div className="mt-5 flex min-h-[420px] items-center justify-center rounded-3xl border border-dashed border-slate-700 bg-slate-950/50 p-8 text-center text-slate-400">
+          <div className="mt-5 flex min-h-[420px] items-center justify-center rounded-3xl border border-dashed border-slate-600 bg-slate-900/70 p-8 text-center text-slate-200">
             Generated image preview will appear here.
           </div>
         ) : (
@@ -80,9 +80,9 @@ export default function ImageGenerator() {
               className="w-full rounded-3xl border border-slate-700 object-cover shadow-2xl"
             />
             <div className="rounded-3xl border border-slate-700 bg-slate-950/60 p-5">
-              <p className="text-sm text-slate-400">Refined prompt</p>
+              <p className="text-sm text-slate-200">Refined prompt</p>
               <p className="mt-2 text-sm leading-6 text-slate-200">{result.refined_prompt}</p>
-              <p className="mt-4 text-xs text-slate-500">Provider: {result.image_provider} | Status: {result.image_status}</p>
+              <p className="mt-4 text-xs text-slate-300">Provider: {result.image_provider} | Status: {result.image_status}</p>
             </div>
             <a
               href={result.image_url}
@@ -97,3 +97,4 @@ export default function ImageGenerator() {
     </div>
   );
 }
+

@@ -45,7 +45,7 @@ export default function VideoGenerator() {
         <div className="mb-5">
           <p className="text-sm uppercase tracking-[0.22em] text-fuchsia-300">Module 2</p>
           <h2 className="mt-2 text-2xl font-bold text-white">AI Video Generator</h2>
-          <p className="mt-2 text-sm leading-6 text-slate-400">
+          <p className="mt-2 text-sm leading-6 text-slate-200">
             Ye image generator se completely separate hai. User script/prompt dega aur app video prompt, narration, scenes, aur video preview banayegi.
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function VideoGenerator() {
       <section className="glass-card rounded-3xl p-6">
         <h3 className="text-xl font-bold text-white">Video Output</h3>
         {!result ? (
-          <div className="mt-5 flex min-h-[500px] items-center justify-center rounded-3xl border border-dashed border-slate-700 bg-slate-950/50 p-8 text-center text-slate-400">
+          <div className="mt-5 flex min-h-[500px] items-center justify-center rounded-3xl border border-dashed border-slate-600 bg-slate-900/70 p-8 text-center text-slate-200">
             Generated video preview will appear here.
           </div>
         ) : (
@@ -85,11 +85,11 @@ export default function VideoGenerator() {
             )}
 
             <div className="rounded-3xl border border-slate-700 bg-slate-950/60 p-5">
-              <p className="text-sm text-slate-400">AI video prompt</p>
+              <p className="text-sm text-slate-200">AI video prompt</p>
               <p className="mt-2 text-sm leading-6 text-slate-200">{result.video_prompt}</p>
-              <p className="mt-4 text-sm text-slate-400">Narration</p>
+              <p className="mt-4 text-sm text-slate-200">Narration</p>
               <p className="mt-2 text-sm leading-6 text-slate-200">{result.narration}</p>
-              <p className="mt-4 text-xs text-slate-500">Provider: {result.video_provider} | Status: {result.video_status}</p>
+              <p className="mt-4 text-xs text-slate-300">Provider: {result.video_provider} | Status: {result.video_status}</p>
             </div>
 
             {result.audio_url && (
@@ -100,7 +100,7 @@ export default function VideoGenerator() {
               {result.scenes?.map((scene, index) => (
                 <div key={`${scene.caption}-${index}`} className="rounded-2xl border border-slate-700 bg-slate-900/70 p-4">
                   <p className="font-semibold text-white">Scene {scene.scene_number || index + 1}: {scene.caption}</p>
-                  <p className="mt-2 text-sm text-slate-400">{scene.visual_prompt}</p>
+                  <p className="mt-2 text-sm text-slate-200">{scene.visual_prompt}</p>
                   <p className="mt-2 text-xs text-sky-300">Camera: {scene.camera_motion || "slow cinematic movement"}</p>
                 </div>
               ))}
@@ -111,3 +111,4 @@ export default function VideoGenerator() {
     </div>
   );
 }
+

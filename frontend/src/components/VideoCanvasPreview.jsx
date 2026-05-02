@@ -49,14 +49,14 @@ function drawScene(ctx, canvas, scene, title, frame) {
   ctx.scale(zoom, zoom);
   ctx.translate(-w / 2, -h / 2);
 
-  ctx.fillStyle = "rgba(15, 23, 42, 0.62)";
+  ctx.fillStyle = "rgba(15, 23, 42, 0.45)";
   ctx.roundRect(50, 130, w - 100, h - 260, 44);
   ctx.fill();
   ctx.strokeStyle = "rgba(147, 197, 253, 0.45)";
   ctx.lineWidth = 3;
   ctx.stroke();
 
-  ctx.fillStyle = "rgba(255,255,255,0.10)";
+  ctx.fillStyle = "rgba(255,255,255,0.16)";
   ctx.roundRect(125, 245, w - 250, 420, 50);
   ctx.fill();
   ctx.strokeStyle = "rgba(255,255,255,0.22)";
@@ -67,7 +67,7 @@ function drawScene(ctx, canvas, scene, title, frame) {
   ctx.textAlign = "center";
   wrapText(ctx, scene?.caption || title, w / 2, 760, w - 150, 52);
 
-  ctx.fillStyle = "#bae6fd";
+  ctx.fillStyle = "#e0f2fe";
   ctx.font = "24px Arial";
   wrapText(ctx, scene?.visual_prompt || "AI cinematic vertical scene", w / 2, 895, w - 160, 34);
   ctx.restore();
@@ -80,7 +80,7 @@ function drawScene(ctx, canvas, scene, title, frame) {
   ctx.textAlign = "left";
   ctx.fillText(title || "AI Video Preview", 72, 94);
 
-  ctx.fillStyle = "rgba(2, 6, 23, 0.78)";
+  ctx.fillStyle = "rgba(2, 6, 23, 0.60)";
   ctx.roundRect(55, h - 150, w - 110, 92, 28);
   ctx.fill();
   ctx.fillStyle = "#ffffff";
@@ -192,3 +192,4 @@ export default function VideoCanvasPreview({ plan }) {
     </div>
   );
 }
+
